@@ -1,7 +1,10 @@
+body {
+    background-color: pink;
+}
 .game {
     width: 600px;
-    height: 200px;
-    border: 1px solid black;
+    height: 262px;
+    border-bottom: 2px solid black;
     margin: auto;
 }
 
@@ -11,26 +14,32 @@
     background-image: url("images/trex.png");
     background-size: 50px 50px;
     position: relative;
+    left: 20;
     top: 150px;
     
 }
 .jump {
-    animation: jump 0.3s linear;
+    animation: jump 0.4s linear;
 }
 
 @keyframes jump {
     0% {
         top: 150px;
     }
-
+    10% {
+        top: 140px;
+    }
     30% {
-        top: 130px;
+        top: 90px;
     }
     50% {
-        top: 80px;
+        top: 50px;
     }
-    80% {
-        top: 130px;
+    70% {
+        top: 90px;
+    }
+    90% {
+        top: 140px;
     }
     100% {
         top: 150px;
@@ -47,7 +56,7 @@
     background-image: url("images/cactus.png");
     background-size: 20px 40px;
     
-    animation: block 1s infinite linear; 
+    animation: block 2s infinite linear; 
 }
 @keyframes block {
     0% {
@@ -56,4 +65,66 @@
     100% {
         left: -20px;
     }
+}
+#cactus_group {
+    width: 30px;
+    height: 40px;
+    position: relative;
+    top: 70px;
+    left: 580px;
+
+    background-image: url("images/cactus_group.png");
+    background-size: 30px 40px;
+    
+    animation: block 2.5s infinite linear; 
+}
+@keyframes block {
+    0% {
+        left: 580px;
+    }
+    100% {
+        left: -20px;
+    }
+}
+.watch{
+    text-align: end;
+    width: 100%;
+    max-width: 360px;
+    margin: -60px 240px;
+}
+.start {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.start button {
+    appearance: none;
+    background: none;
+    border: none;
+    outline: none;
+    user-select: none;
+    cursor: pointer;
+    background-color: var(--primary);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: 0.4s;
+
+}
+.end {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.end button {
+    appearance: none;
+    background: none;
+    border: none;
+    outline: none;
+    user-select: none;
+    cursor: pointer;
+    background-color: var(--primary);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: 0.4s;
+
 }
